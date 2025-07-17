@@ -1,6 +1,6 @@
-# Deep Learning Project - Breast Cancer Classification
+# Deep Learning Project - Breast Cancer Tissue Classification
 
-This document focuses on the critical task of breast cancer classification using deep learning techniques applied to high-resolution microscopic images.
+This document focuses on the critical task of 'two-stage' breast cancer classification using deep learning techniques applied to high-resolution microscopic images.
 
 ## Purpose
 
@@ -29,7 +29,7 @@ The project was structured into two main stages, employing Convolutional Neural 
 
 ### Preprocessing
 * Images were resized to 128x128 pixels to manage RAM and ensure consistency.
-* **Data Augmentation:** Techniques like brightness adjustment, rotation, and zooming were applied using `ImageDataGenerator` and TensorFlow's Image Processing API to improve model generalization.
+* **Data Augmentation:** Techniques like brightness adjustment, rotation and zooming were applied using `ImageDataGenerator` and TensorFlow's Image Processing API to improve model generalization.
 * **Normalization & Shuffling:** Images were normalized and shuffled for optimal model training.
 
 ### Model Development (Two Stages)
@@ -44,7 +44,7 @@ The project was structured into two main stages, employing Convolutional Neural 
 
 **Stage 2: Multiclass Classification (Specific Tumor Type)**
 * **Architecture:** Used softmax activation and sparse categorical crossentropy.
-* **Initial Performance:** Baseline F1 score of 0.39.
+* **Initial Performance:** Baseline F1 score of 0,39.
 * **Optimization:** Hyperband search with BatchNormalization.
 * **Functional API:** Implemented a Functional API with two inputs (images and a CSV file indicating benign/malignant status) to narrow down the prediction task, significantly improving performance.
 * **Overfitting Mitigation:** Reduced batch size and incorporated dropout layers.
